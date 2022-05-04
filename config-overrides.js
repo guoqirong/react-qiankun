@@ -47,10 +47,10 @@ const devServerConfig = () => config => {
     // headers: {
     //   'Access-Control-Allow-Origin': '*',
     // },
-    historyApiFallback: true,
-    hot: false,
+    // historyApiFallback: true,
+    // hot: false,
     // watchContentBase: false,
-    liveReload: false,
+    // liveReload: false,
   }
 }
 

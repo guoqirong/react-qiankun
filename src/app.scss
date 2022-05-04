@@ -1,0 +1,45 @@
+.app {
+  .left-menu,
+  .rigth-qiankun-wrapper {
+    display: inline-block;
+    vertical-align: top;
+  }
+  .left-menu {
+    width: 200px;
+    background: #444;
+    height: 100vh;
+    .left-menu-title {
+      height: 50px;
+      line-height: 50px;
+      font-weight: bold;
+      color: white;
+      text-align: center;
+      font-size: 16px;
+      letter-spacing: 6px;
+    }
+    .left-menu-body {
+      border-top: 1px solid gray;
+    }
+  }
+  .rigth-qiankun-wrapper {
+    width: calc(100% - 200px);
+    overflow-y: auto;
+    height: 100vh;
+  }
+}
+
+
+// @media (prefers-reduced-motion: no-preference) {
+//   .App-logo {
+//     animation: App-logo-spin infinite 20s linear;
+//   }
+// }
+
+// @keyframes App-logo-spin {
+//   from {
+//     transform: rotate(0deg);
+//   }
+//   to {
+//     transform: rotate(360deg);
+//   }
+// }

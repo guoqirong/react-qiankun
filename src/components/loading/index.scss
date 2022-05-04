@@ -1,0 +1,45 @@
+// 样式
+.hp-spin {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 108;
+  height: 100%;
+  .spin-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 109;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    .spin-img {
+      position: absolute;
+      top: calc(50% - 40px);
+      left: calc(50% - 50px);
+    }
+  }
+  &.hide .spin-content {
+    display: none;
+  }
+  .is-not-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .spin-img {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    background-image: url('../../assets/icons/loading.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation: opacity-loading-img infinite 0.8s linear;
+  }
+  @keyframes opacity-loading-img {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
