@@ -1,5 +1,6 @@
 import { FunctionComponent } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import useEventBus from '../../utils/eventBus';
 import './index.scss';
 
 interface MenuItemProps {
@@ -10,6 +11,7 @@ interface MenuItemProps {
 const MenuItem: FunctionComponent<MenuItemProps> = ({ menuText, menuPath }) => {
   const history = useNavigate();
   const location = useLocation()
+  const [event] = useEventBus();
 
   const getSelected = (path: string) => {
     if (path === '/') {
@@ -22,6 +24,9 @@ const MenuItem: FunctionComponent<MenuItemProps> = ({ menuText, menuPath }) => {
     <div
       className={`menu-item${getSelected(menuPath) ? ' is-selected' : ''}`}
       onClick={() => {
+        if (menuPath !== '/') {
+          event.emit('qiankun-child-loading', true);
+        }
         history(menuPath);
       }}
     >
