@@ -3,7 +3,7 @@ import { Suspense, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import './app.scss';
 import Loading from "./components/loading";
-import MenuItem from "./components/MenuItem";
+import MenuItem from "./components/menu-item";
 
 import routes from "./routers";
 import { getQiankunAppUrl } from "./utils";
