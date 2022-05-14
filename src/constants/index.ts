@@ -25,4 +25,10 @@ export const qiankunApp = [
     container: '#container',
     activeRule: prefix + '/#/vue2-cnode',
   },
+  {
+    name: 'vue-vite-cnode',
+    entry: 'https://guoqirong.github.io/vue-vite-cnode/',
+    container: '#container',
+    activeRule: prefix + '/#/vue-vite-cnode',
+  },
 ];

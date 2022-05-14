@@ -24,7 +24,7 @@ const MenuItem: FunctionComponent<MenuItemProps> = ({ menuText, menuPath }) => {
     <div
       className={`menu-item${getSelected(menuPath) ? ' is-selected' : ''}`}
       onClick={() => {
-        if (menuPath !== '/') {
+        if (menuPath !== '/' && menuPath !== location.pathname) {
           event.emit('qiankun-child-loading', true);
         }
         history(menuPath);

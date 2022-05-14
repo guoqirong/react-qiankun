@@ -20,6 +20,7 @@ registerMicroApps(qiankunApp.map((item: any) => {
 }), {
   beforeLoad: (app) => {
     console.log('before load', app.name);
+    event.emit('qiankun-child-loading', true);
     return new Promise<void>((resolve) => {
       resolve();
     });
